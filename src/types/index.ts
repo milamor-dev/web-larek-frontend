@@ -4,7 +4,7 @@ export interface IProduct {
     image: string;
     title: string;
     category: string;
-    price: number;
+    price: number | null;
 }
 
 export type IBasketProdact = Pick<IProduct, 'id' | 'title' | 'price'>;
@@ -35,7 +35,8 @@ export interface IOrderResult {
 }
 
 export interface IAppState {
-	catalog: IProduct[]; 
+	catalog: IProduct[];
+    preview: string;
 	order: IFullOrder;
 	basket: IBasket;	
 	}

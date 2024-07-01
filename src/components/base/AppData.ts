@@ -17,21 +17,18 @@ export class AppState implements IAppState
         items: [],
         total: 0,
         };
-        formErrors: FormErrors = {};
+    preview: string;
+    formErrors: FormErrors = {};
 
-    toggleOrderedLot(id: string, isIncluded: boolean) {
-        if (isIncluded) {
-            this.order.items = _.uniq([...this.order.items, id]);
-        } else {
-            this.order.items = _.without(this.order.items, id);
-        }
-    }
+    toggleOrderedProduct(id: string, isIncluded: boolean)
 
     clearBasket() 
 
     getTotal() 
 
     setCatalog(items: IProduct[]) 
+
+    setPreview(item: IProduct) 
 
     setOrderField(field: keyof IFullOrder, value: string) 
 
