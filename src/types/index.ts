@@ -1,4 +1,5 @@
 export interface IProduct {
+    // inBasket: boolean;
     id: string;
     description: string;
     image: string;
